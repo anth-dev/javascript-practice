@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Function library example</title>
+    <style>
+        input {
+            font-size: 2em;
+            margin: 10px 1px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <input class="numberInput" type="text">
+    <p></p>
+
+    <script>
+        let input = document.querySelector('.numberInput');
+        let para = document.querySelector('p');
+
+        function squared(num) {
+            return num * num;
+        }
+
+        function squareRoot(num) {
+            return Math.sqrt(num);
+        }
+
+        function cubed(num) {
+            return num * num * num;
+        }
+
+        function cubeRoot(num) {
+            return Math.cbrt(num);
+        }
+
+        function factorial(num) {
+            let x = num;
+            while (x > 1) {
+                num *= x-1;
+                x--;
+            }
+            return num;
+        }
+
+        function circumference(num) {
+            return 2 * Math.PI * num;
+        }
+
+        input.onchange = function() {
+            let num = input.value;
+            if (isNaN(num)) {
+                para.textContent = 'You need to enter a number!';
+            } else {
+                para.textContent = num + ' squared is ' + squared(num) + '. ' +
+                                   'The square root of ' + num + ' is ' + squareRoot(num) + '. ' +
+                                   num + ' cubed is ' + cubed(num) + '. ' +
+                                   'The cube root of ' + num + ' is ' + cubeRoot(num) + '. ' +
+                                   num + ' factorial is ' + factorial(num) + '. ' +
+                                   'The circumference of a circle with a radius of ' + num + ' is ' + circumference(num) + '.';
+            }
+        }
+    </script>
+</body>
+</html>
