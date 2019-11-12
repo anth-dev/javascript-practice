@@ -24,6 +24,27 @@
     //   }
     // }
 
+    // Output prime numbers
+    // This is working except it skips 5?
+
+    userNumber = prompt('Please enter any number to receive primes');
+
+    for (i = 2; i <= userNumber; i++) {
+        if (i == 2) {
+            alert(i);
+        } else if (i % 2 == 0) {
+            continue;
+        // I think the next line might be the issue, maybe do a loop inside a loop
+        // to try to divide i by numbers up to userNumber? Currently i gets to 5 and
+        // it does 10 % 5 == 0 and comes back truthy. I don't think I should be
+        // dividing the userNumber.
+        } else if (userNumber % i == 0) {
+            continue;
+        } else {
+            alert(i);
+        }
+    }
+
   </script>
 
 </body>
