@@ -34,4 +34,7 @@ container.appendChild(h3);
 div.style.cssText = 'border-style: solid; border-color: cornflowerblue; background-color: pink'
 h1.textContent = 'I\'m in a div';
 div.appendChild(h1);
+// When you uncomment the following the p element above disappears
+// p.textContent = 'ME TOO!';
+// div.appendChild(p);
 container.appendChild(div);
