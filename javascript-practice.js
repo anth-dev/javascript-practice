@@ -17,3 +17,13 @@ body.setAttribute('style', 'background-color: black; color: white;');
 //      * Hint for this one: after creating the div with createElement, append the 
 //          <h1> and <p> to it before adding it to the container.
 
+const container = document.querySelector('#container');
+const p = document.createElement('p');
+const h3 = document.createElement('h3');
+
+p.style.cssText = 'color: red';
+p.textContent = 'Hey I\'m red!';
+container.appendChild(p);
+h3.style.cssText = 'color: blue';
+h3.textContent = 'I\'m a blue h3!';
+container.appendChild(h3);
