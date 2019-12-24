@@ -4,6 +4,3 @@ body.style.cssText = 'background-color: black; color: white;';
 // Don't remove anything above this comment
 
 // Exercise
-
-var btn = document.querySelector('#btn');
-btn.onclick = () => alert('Hello World');
