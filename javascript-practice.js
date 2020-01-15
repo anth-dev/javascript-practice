@@ -41,7 +41,9 @@ const MOUNTAINS = [
  
  let table = document.querySelector("table");
  let data = Object.keys(MOUNTAINS[0]);
- generateTableHead(table, data);
+ // generate the table first or there will be no table body
  generateTable(table, MOUNTAINS);
+ generateTableHead(table, data);
+ 
 
  
