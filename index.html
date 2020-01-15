@@ -16,43 +16,12 @@ Once you have this working, right-align cells that contain number values by sett
 <body>
   <h1>Mountains</h1>
 
-  <div id="mountains"></div>
+  <div id="mountains">
+    <table>
+
+    </table>
+  </div>
   
-  <script>
-    const MOUNTAINS = [
-      {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
-      {name: "Everest", height: 8848, place: "Nepal"},
-      {name: "Mount Fuji", height: 3776, place: "Japan"},
-      {name: "Vaalserberg", height: 323, place: "Netherlands"},
-      {name: "Denali", height: 6168, place: "United States"},
-      {name: "Popocatepetl", height: 5465, place: "Mexico"},
-      {name: "Mont Blanc", height: 4808, place: "Italy/France"}
-    ];
-  
-    // Your code here
-
-    // **banging head on keyboard** why won't you work!
-    // using cloneNode() should let us append variables more than once :)
-
-   let tableContainer = document.querySelector("#mountains");
-   let addTable = document.createElement("table");
-   let addTableRow = document.createElement("tr");
-   let addTableHeading = document.createElement("th");
-   let addTableData = document.createElement("td");
-   mountains.appendChild(addTable);
-   addTableRow.classList.add('rows')
-   mountains.appendChild(addTableRow.cloneNode());
-   addTableHeading.textContent = 'name';
-   mountains.appendChild(addTableHeading.cloneNode());
-   // the following seems to overwrite the first leaving only one heading?
-   addTableHeading.textContent = 'height';
-   mountains.appendChild(addTableHeading.cloneNode());
-   
-  </script>
-
-  <div id='container'></div>
-  <script src='javascript-practice.js'>
-  </script>
 </body>
-
+<script src='javascript-practice.js'></script>
 </html>
